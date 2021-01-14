@@ -310,10 +310,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     position: absolute;
                     display: block;
                   }
-                  .effect-right_to_left .effect-img {
+                  .effect-left_to_right .effect-img {
                     transform-origin: 0% 50%;
                   }
-                  .effect-right_to_left:hover .effect-img {
+                  .effect-left_to_right:hover .effect-img {
                     transform: rotate3d(0, 1, 0, -180deg);
                   }
                 </style>
