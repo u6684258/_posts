@@ -1,11 +1,11 @@
 title: Ming # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  坐标ANU, Canberra, Australia<br/>
-  Bachelor of Advanced Computing(R&D)<br/>
-  Bachelor of Actuarial Studies 双学位<br/>
+  ANU, Australia<br/>
+  Advanced Computing(R&D)<br/>
+  Actuarial Studies 双学位<br/>
   日本語を勉強中〜<br/>
-  favorite：⛷ & 🏹 & 🎸<br/>
-
+  爱好：⛷ & 🏹 & 🎸<br/>
+  <br/>
   <a href="mailto:i@mingyu.hao@anu.edu.au">
     <i class="fas fa-envelope"></i>
   </a>
@@ -14,15 +14,6 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
     <i class="fab fa-github"></i>
   </a>
   
-  <!--APlayer
-  <script src="https://cdn.jsdelivr.net/npm/vconsole/dist/vconsole.min.js"></script> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js"></script> 
-  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script> 
-  <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script> 
-  <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
-  <meting-js server="tencent" type="playlist" id="621150623" fixed="true"></meting-js>
-  -->
 url: https://u6684258.github.io/ # 你的域名，例如 https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
@@ -35,7 +26,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
         default:
           body:
             theme-base: theme-base-07 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
-            layout-reverse: true # 开启后sidebar在右边，反之左边
+            layout-reverse: false # 开启后sidebar在右边，反之左边
             sidebar-overlay: true # 开启后正文不随sidebar移动而移动
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
             - | #一些页面优化标签，看不懂可跳过
@@ -56,12 +47,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 网站小图标，可换成你自己的图片，改href中的部分即可
               <link
                 rel="apple-touch-icon-precomposed"
-                href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320"
+                href="https://sm.ms/image/H5KXutj1Md3BYpO"
               />
               <link
                 rel="shortcut
                 icon"
-                href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=32"
+                href="https://sm.ms/image/H5KXutj1Md3BYpO"
               />
             - | # 来自lanyon的页面样式，不要改
               <link
@@ -156,11 +147,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   background-position: 0% 0%;
                   background-repeat: no-repeat;
                   background-attachment: fixed;
-                  background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/74559485_p1.webp);
+                  background-image: url(https://i.loli.net/2021/01/14/y3RrsEhK7ciJOHa.jpg);
                 }
                 @media (min-aspect-ratio: 2400/1850) {
                   .wrap {
-                    background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
+                    background-image: url(https://i.loli.net/2021/01/14/y3RrsEhK7ciJOHa.jpg);
                   }
                 }
                 .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
@@ -228,14 +219,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
               - title: '<i class="fas fa-home fa-fw"></i> 首页'
                 href: /
-              - title: '<i class="fas fa-comments fa-fw"></i> 留言'
-                href: /comments/
               - title: '<i class="fas fa-tags fa-fw"></i> 标签'
                 href: /tags/
               - title: '<i class="fas fa-archive fa-fw"></i> 归档'
                 href: /archive/
-              - title: '<i class="fas fa-coffee fa-fw"></i> 打赏'
-                href: /merger/
             simple_jekyll_search: # 侧边栏的全站搜索
               enable: true
               full_text_search: false # 可能导致缓慢的搜索和加载
@@ -534,27 +521,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 }
               </style>
-        comments: # 留言页
-          append:
-            | # 配置评论区，appId和appKey需要换成你自己的，见<https://valine.js.org/configuration.html>，推荐再整一个评论管理系统<https://github.com/DesertsP/Valine-Admin>
-            <div class="v">
-              <i class="fas fa-spinner fa-pulse"></i>
-            </div>
-            <script
-              src='https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js'
-              async="async"
-              onload='
-                for(let x of document.getElementsByClassName("v"))
-                  new Valine({
-                    "el": x,
-                    "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
-                    "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
-                    "placeholder": "在这里评论吧！填写邮箱可以获得 Gravatar 头像和回复通知哦",
-                    "requiredFields": ["nick","mail"],
-                    "visitor": true,
-                    "recordIP": true
-                  })'
-            ></script>
+        
         post:
           date: # 显示博文时间
             enable: true
@@ -604,41 +571,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           year_count: true
           toc: # 在正文里显示一个归档的目录
             enable: false
-        merger: # 打赏页，需要配置！
-          append_to_head:
-            - | # 需要配置的变量见<https://merger.justhx.com/cn/docs/configure>
-              <script>
-                var myname = "WuK";
-                var profile = "i@wu-kan.cn";
-                var usage = "payment";
-                var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
-                var tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ77zFwQMY-6u57gU%3D_xxx_sign&u=942759535&n=%E8%94%9A";
-                var alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
-                var paypal = "https://paypal.me/wukan0621";
-                var multilingual = false;
-                var branding = false;
-                var title = "选择你的支付方式";
-                var subtitle = "跟随进一步的指示以向" + myname + "付款";
-                var qrcodeapi = "https://www.zhihu.com/qrcode?url=";
-                var gravatar_url = "https://gravatar.loli.net/avatar/";
-              </script>
-            - |
-              <meta
-                charset="utf-8"
-              />
-              <meta
-                name="viewport"
-                content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-              />
-              <meta
-                http-equiv="Content-Security-Policy"
-                content="upgrade-insecure-requests"
-              />
-            - | # merger的页面样式
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.26.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.26.1/assets/styles/style.min.css">
-              <script defer="defer" src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1"></script>
-              <script defer="defer" src="https://cdn.jsdelivr.net/combine/gh/lrsjng/jquery-qrcode@0.18.0/dist/jquery-qrcode.min.js,npm/blueimp-md5@2.18.0/js/md5.min.js,gh/hifocus/merger@0.26.1/assets/js/function.min.js,gh/hifocus/merger@0.26.1/assets/js/font_974919_xgtacm93vxp.min.js"></script>
-    
+        
         home: # 展示页的配置可跳过，详见<https://revealjs.com/>
           append_to_section_tag:
             - key: data-markdown
