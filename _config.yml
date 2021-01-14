@@ -1,27 +1,28 @@
 title: Ming # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
   坐标ANU, Canberra, Australia<br/>
-  Bachelor of Advanced Computing(R&D)
-  Bachelor of Actuarial Studies 双学位
+  Bachelor of Advanced Computing(R&D)<br/>
+  Bachelor of Actuarial Studies 双学位<br/>
   日本語を勉強中〜<br/>
-  favorite：⛷ & 🏹 & 🎸
+  favorite：⛷ & 🏹 & 🎸<br/>
 
   <a href="mailto:i@mingyu.hao@anu.edu.au">
     <i class="fas fa-envelope"></i>
   </a>
+
   <a href="https://github.com/u6684258/">
     <i class="fab fa-github"></i>
   </a>
   
-  <iframe
-    src="https://y.gtimg.cn/music/h5/client/jsbridge.js?max_age=2592000"
-    width=100%
-    height=52
-    frameborder="no"
-    border="0"
-    marginwidth="0"
-    marginheight="0"
-  ></iframe>
+  <!--APlayer-->
+  <script src="https://cdn.jsdelivr.net/npm/vconsole/dist/vconsole.min.js"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+  <meting-js server="netease" type="playlist" id="621150623" fixed="true"></meting-js>
+
 url: https://u6684258.github.io/ # 你的域名，例如 https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
