@@ -26,7 +26,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
         default:
           body:
             theme-base: theme-base-07 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
-            layout-reverse: false # 开启后sidebar在右边，反之左边
+            layout-reverse: true # 开启后sidebar在右边，反之左边
             sidebar-overlay: true # 开启后正文不随sidebar移动而移动
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
             - | #一些页面优化标签，看不懂可跳过
@@ -75,7 +75,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 onload='
                   let pio_container = document.createElement("div");
                   pio_container.classList.add("pio-container");
-                  pio_container.classList.add("right");
+                  pio_container.classList.add("left");
                   pio_container.style.bottom = "-2rem";
                   pio_container.style.zIndex = "1";
                   document.body.insertAdjacentElement("beforeend", pio_container);
@@ -310,11 +310,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     position: absolute;
                     display: block;
                   }
-                  .effect-left_to_right .effect-img {
+                  .effect-right_to_left .effect-img {
                     transform-origin: 0% 50%;
                   }
-                  .effect-left_to_right:hover .effect-img {
-                    transform: rotate3d(0, 1, 0, 180deg);
+                  .effect-right_to_left:hover .effect-img {
+                    transform: rotate3d(0, 1, 0, -180deg);
                   }
                 </style>
               - | # 运行时间，可将倒数第三行的时间改成你自己的建站时间，格式仿照上面的；不需要的话可以把这一项都删掉
