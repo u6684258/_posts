@@ -314,7 +314,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     transform-origin: 0% 50%;
                   }
                   .effect-left_to_right:hover .effect-img {
-                    transform: rotate3d(0, 1, 0, -180deg);
+                    transform: rotate3d(0, 1, 0, 180deg);
                   }
                 </style>
               - | # 运行时间，可将倒数第三行的时间改成你自己的建站时间，格式仿照上面的；不需要的话可以把这一项都删掉
