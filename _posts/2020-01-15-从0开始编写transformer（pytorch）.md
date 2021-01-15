@@ -1,8 +1,8 @@
 ---
 title : 从0开始的Transformer
 tags : 
-	- Deep Learning
-	- NLP
+  - Deep Learning
+  - NLP
 ---
 
 ## Heading 2
