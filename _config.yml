@@ -1,11 +1,11 @@
 title: Ming # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  ANU, Australia<br/>
-  Advanced Computing(R&D)<br/>
-  Actuarial Studies 双学位<br/>
+  Australia National University<br/>
+  高级计算机(honor)(R&D)<br/>
+  & 精算 双学位<br/>
   日本語を勉強中〜<br/>
   爱好：⛷ & 🏹 & 🎸<br/>
-  <br/>
+  yoasobi & zutomayo <br/>
   <a href="mailto:i@mingyu.hao@anu.edu.au">
     <i class="fas fa-envelope"></i>
   </a>
@@ -392,7 +392,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               - | # Copyright声明
                 <div>
                   <i class="fas fa-copyright fa-fw"></i>
-                  2021-2021 Ming
+                  2021-2021 Ming <br/>
                   特别鸣谢：Wuk
                 </div>
              
