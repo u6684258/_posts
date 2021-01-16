@@ -35,11 +35,11 @@ Transfomers完美克服了这两个问题。How？
 
 attention可以理解为单词于单词之间的关联程度。比如下图[1]：
 
-![sentence-example-attention](../assets/images/2021-01-15-01.png)
+![]({{site.url}}/assets/images/2021-01-15-01.png)
 
 直观地来看，相较于“吃”和“苹果”的关联，“吃”和“绿色的”关联应该弱一些。相对的，“绿色的”和“苹果”之间的关联应该强于“吃”和“绿色的”关联。那么我们该如何表示这个“关联”呢？首先，我们用一个vector来表示一个单词，每个单词有自己对应的vector。这一步叫embedding。这个对应的vector是需要通过反向传播来学习的。然后，我们用两个单词的vector的点乘来表示这两个单词之间关系的权重。举个例子：
 $$
-假设 \ eating是x_i=\left(
+\\ 假设 \ eating是x_i=\left(
 \begin{matrix}
 1\\
 2\\
@@ -51,40 +51,40 @@ green是x_j=\left(
 5\\
 6\end{matrix}\right)
 \\
-W_{ij} = x_i^T * x_j = 32
+W_{ij} = x_i^T * x_j = 32 \\
 $$
 这是i关于j的权重。值得注意的是j关于i的权重是一样的。下一步，我们算出i关于所有j的权重，然后进行一次softmax操作。这样使得：
 $$
-\sum_jW_{ij} = 1
+\\ \sum_jW_{ij} = 1 \\
 $$
 也就是说我们得到了每个单词j相对于i的关联性的权重。我们希望得到
 $$
-W_{eating,apple} > W_{eating,green}
+ \\ W_{eating,apple} > W_{eating,green} \\
 $$
-也就是说，**在这个句子中 **，对于eating这个单词，apple与其关联性大于green。这是经过神经网络学习embedding，我们希望最终得到的结果。我们之前说过，transformer输出一个sequence。所以接下来我们求所有单词关于i的加权平均数，这就是输出序列的第j位：
+也就是说，**在这个句子中**，对于eating这个单词，apple与其关联性大于green。这是经过神经网络学习embedding，我们希望最终得到的结果。我们之前说过，transformer输出一个sequence。所以接下来我们求所有单词关于i的加权平均数，这就是输出序列的第j位：
 $$
-y_j = \sum_jW_{ij} * x_j
+\\ y_j = \sum_jW_{ij} * x_j \\
 $$
 对每一个j都进行上述操作，我们就得到了输出序列 **y**.它的长度和输入序列是一样的。我个人把它理解为，每个y是对应单词与其他单词关联性的加权平均数。下图[2]展示了上述过程（softmax未展示）：
 
-![](../assets/images/2021-01-15-02.svg)
+![]({{site.url}}/assets/images/2021-01-15-02.svg)
 
 以上就是self-attention最基础的内容。我们在此基础上增加一些内容来提升模型的实用性。首先，单纯使用embedding vector，模型的变化不大，所以我们给上述过程中每一个vector添加一个可以学习的weight，分别叫做key，query，value。那么我们的计算过程会变成这样：
 $$
-k=w_{key}*x_j \ , q=w_{query}*x_i^T \ , v=w_{value}*x_j \\
+\\ k=w_{key}*x_j \ , q=w_{query}*x_i^T \ , v=w_{value}*x_j \\
 W_{ij} = q * k
 \\W_{ij} = softmax(W_{ij})\\
-y_j = W_{ij}*v
+y_j = W_{ij}*v \\
 $$
 参数的增加使得我们的输入更加可控。如下图[2]：
 
-![](../assets/images/2021-01-15-03.svg)
+![]({{site.url}}/assets/images/2021-01-15-03.svg)
 
 图中蓝色是key，红色是query，绿色是value。
 
 接下来，为了防止权重W过大，我们在softmax前做一个scale down：
 $$
-W_{ij} = softmax(\frac{W_{ij}}{\sqrt{k}}), 这里 \ k \ 是 \ embedding \ vector \ 的维度（上边的例子里k=3）
+\\ W_{ij} = softmax(\frac{W_{ij}}{\sqrt{k}}), 这里 \ k \ 是 \ embedding \ vector \ 的维度（上边的例子里k=3）\\
 $$
 这样得到的一串y就是self-attention最终输出。
 
@@ -168,11 +168,11 @@ test = SelfAttention(2, 4)
 test(x)
 ```
 
-##### Transformer
+#### Transformer
 
 终于可以开始讲transformer本体了！下图[3]给出了一个transformer block的基本结构：
 
-<img src="../assets/images/2021-01-15-04.png" style="zoom:12%;" />
+<img src="{{site.url}}/assets/images/2021-01-15-04.png" style="zoom:12%;" />
 
 你会发现，其实transformer大部分内容我们已经讲过了，也就是上文写的multihead self-attention block。图中写了x K heads的部分就是k个heads的self attention block。虽然和我们的标注略有不同，但是结构是完全一样的。输入的h（上文的x）在经过了attention block后，经过concat（也就是multiheads最后的linear mapping）， 再经过一次layer normalization，一个全连接层，再一次layer normalization，得到的输出就是transformer block的最终输出。直接上代码：
 
@@ -214,7 +214,7 @@ trans(x)
 
 这里举一个sentiment analysis的例子。sentiment analysis即语言情感分析，例如判断一个电影的评；论是积极的还是消极的。积极和消极是两个class，这本质上是一个classification的任务。所以我们设计如下神经网络[2]：
 
-![](/Users/mac/Desktop/codings/others/u6684258.github.io/assets/images/2021-01-15-05.svg)
+![]({{site.url}}/assets/images/2021-01-15-05.svg)
 
 以下几点值得注意：
 

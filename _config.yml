@@ -176,6 +176,18 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   font-family: PingFang SC, Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
                 }
               </style>
+              <style>
+                .sidebar,
+                html,
+                h6 {
+                  font-size: 16px;
+                }
+              </style>
+              <style>
+                h4{
+                  font-size: 20px;
+                }
+              </style>
             - | # 网页标题使用加粗字号
               <style>
                 h1,
@@ -419,7 +431,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               <script
                 src="https://cdn.jsdelivr.net/combine/npm/katex@0.12.0/dist/katex.min.js,npm/katex@0.12.0/dist/contrib/auto-render.min.js"
                 async="async"
-                onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
+                onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: true }, {left: "\\(", right: "\\)", display: true}, {left: "\\[", right: "\\]", display: true}]})'
               ></script>
           mermaid: # mermaid图插件
             enable: true
