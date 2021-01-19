@@ -121,6 +121,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     },
                     "model": [
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/22/model.2018.bls-winter.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
                       "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
@@ -177,7 +178,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <style>
-                .sidebar,
                 html,
                 h6 {
                   font-size: 16px;
@@ -231,10 +231,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
               - title: '<i class="fas fa-home fa-fw"></i> 首页'
                 href: /
-              - title: '<i class="fas fa-tags fa-fw"></i> 标签'
-                href: /tags/
-              - title: '<i class="fas fa-archive fa-fw"></i> 归档'
+              - title: '<i class="fas fa-archive fa-fw"></i> 博文'
                 href: /archive/
+              - title: '<i class="fas fa-tags fa-fw"></i> 归档'
+                href: /tags/
             simple_jekyll_search: # 侧边栏的全站搜索
               enable: true
               full_text_search: false # 可能导致缓慢的搜索和加载

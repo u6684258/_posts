@@ -1,10 +1,5 @@
-# 施工中...
-
-
-
-<!-- .slide -->
-
-## Contact
+# Ming 
+my blog
 
 
 
